@@ -94,17 +94,33 @@ void secondPart() {
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++) {
             cin >> matrix[i][j];
+            /*
+             * Если текущий элемент равен нулю, то увеличиваем счётчик
+             * нулевых элементов на 1
+             */
             if (matrix[i][j] == 0)
                 nullCount++;
         }
 
     for (int i = 0; i < n; i++) {
+        /*
+         * Переменная для хранения информации о том, отсортирован ли столбец
+         * матрицы.
+         */
         bool sorted = true;
         for (int j = 0; j < n - 1; j++)
+            /*
+             * Если текущий элемент столбца больше следующего, то присваиваем
+             * sorted значение false и выходим из цикла.
+             */
             if (matrix[j][i] > matrix[j + 1][i]) {
                 sorted = false;
                 break;
             }
+        /*
+         * Если sorted равно true, то увеличиваем счётчик отсортированных
+         * столбцов на 1.
+         */
         if (sorted) sortedColumnsCount++;
     }
 
