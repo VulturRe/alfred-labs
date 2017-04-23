@@ -6,6 +6,9 @@ using namespace std;
  * Функция, возвращающая количество пересечений с осью OX (решений).
  */
 int solutionsCount(int a, int b, int c) {
+    /*
+     * pow (b, 2) - функция, которая возвращает b в степени 2
+     */
     double d = pow(b, 2) - 4*a*c;
     if (d < 0) return 0;
     if (d == 0) return 1;
