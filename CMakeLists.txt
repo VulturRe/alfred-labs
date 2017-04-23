@@ -3,5 +3,5 @@ project(alfredlabs)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES lab2.cpp)
 add_executable(alfredlabs ${SOURCE_FILES})
